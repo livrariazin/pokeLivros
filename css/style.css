@@ -1,0 +1,277 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+#fundo {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: row;
+  z-index: -1;
+}
+
+#layer {
+  background-color: rgba(21, 21, 21, 0.7);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+#container-pokeball {
+  width: 400px;
+  height: 950px;
+  border: 10px solid #373737;
+  border-radius: 2%;
+  background-color: rgba(214, 9, 9, 0.3);
+  position: relative;
+}
+
+#pokeball {
+  width: 150px;
+  height: 150px;
+  margin-top: 10px;
+  margin-left: 115px;
+  margin-right: auto;
+}
+
+#pokeball:hover {
+  cursor: pointer;
+  scale: 1.1;
+  transition: 200ms;
+}
+
+#pokeball:not(:hover) {
+  cursor: pointer;
+  scale: 1;
+  transition: 00ms;
+}
+
+#pokeball:active {
+  scale: 1.2;
+}
+
+#riqueza {
+  width: 50%;
+  text-align: center;
+  margin-top: 180px;
+  padding-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  user-select: none;
+  color: white;
+}
+
+#btnSave {
+  width: 80px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+#btnReset {
+  width: 80px;
+  position: absolute;
+  bottom: 10px;
+  left: 100px;
+}
+
+#container-team {
+  width: 400px;
+  height: 950px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 40px;
+  background-color: #373737;
+  border: 1px solid #373737;
+  border-radius: 2%;
+}
+
+.pokeCaught {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: auto 0px auto 0px;	
+  border: double 2px transparent;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.imagemdosPoke {
+  display: none;
+}
+
+.pokeCaught:hover {
+  cursor: pointer;
+}
+
+.pokeCaught img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid wheat;
+}
+
+#pokemon1 {
+  background-image: linear-gradient(#272727, #272727), linear-gradient(145deg, red 48%,black 48%, black 58%, white 58%, white 10%);
+  border-width: 12px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#pokemon2 {
+  background-size: cover;
+  background-image: linear-gradient(#272727, #272727), linear-gradient( 145deg, red 48%,black 48%, black 58%, white 58%, white 10%);
+  border-width: 12px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#pokemon3 {
+  background-size: cover;
+  background-image: linear-gradient(#272727, #272727), linear-gradient( 145deg, red 48%,black 48%, black 58%, white 58%, white 10%);
+  border-width: 12px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#pokemon4 {
+  background-size: cover;
+  background-image: linear-gradient(#272727, #272727), linear-gradient( 145deg, red 48%,black 48%, black 58%, white 58%, white 10%);
+  border-width: 12px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#pokemon5 {
+  background-size: cover;
+  background-image: linear-gradient(#272727, #272727), linear-gradient( 145deg, red 48%,black 48%, black 58%, white 58%, white 10%);
+  border-width: 12px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#pokemon6 {
+  background-size: cover;
+  background-image: linear-gradient(#272727, #272727), linear-gradient( 145deg, red 48%,black 48%, black 58%, white 58%, white 10%);
+  border-width: 12px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.conquista {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 80px;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+}
+
+#conquistaICON {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  border: 1px solid blue;
+}
+
+.conquista h2 {
+  font-size: 20px;
+  margin: 10px;
+}
+
+#fechar {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 5px;
+  right: 5px;
+  border: 1px solid orange;
+  border-radius: 100%;
+  text-align: center;
+}
+
+#fechar:hover {
+  cursor: pointer;
+}
+
+#containeres {
+  display: flex;
+  flex-direction: row;
+  margin: 15px 50px 0px 50px;
+  justify-content: space-between;
+}
+
+#container3 div {
+  display: none;
+}
+
+#menu {
+  width: 500px;
+  height: 100%;
+  padding-bottom: 30px;
+  background-color: #373737;
+  position: relative;
+}
+
+#menuDivisao {
+  position: absolute;
+  top: 0px;
+  right: -70px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.divisoes {
+  width: 70px;
+  height: 70px;
+  background-color: #373737;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divisoes img {
+  max-width: 90%;
+}
+
+#menuPokeballs {
+  margin: 20px 20px 0px 20px;
+  display: none;
+}
+
+#galeria-pokeballs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+#galeria-pokeballs img {
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+}
+
+.myBalls {
+  text-align: center;
+  color: white;
+}

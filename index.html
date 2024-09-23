@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pokegame.css" />
+    <link rel="stylesheet" href="css/bolsa.css" />
+    <title>Clicker</title>
+  </head>
+  <body>
+    <div id="fundo">
+      <img src="img/pokemons.jpg" /><img src="img/pokemons.jpg" /><img
+        src="img/pokemons.jpg" />
+      <div id="layer"></div>
+    </div>
+    <div id="containeres">
+      <div id="container-pokeball">
+        <h1 id="riqueza">0</h1>
+        <img
+          src="img/pokebolas/pokeball.webp"
+          id="pokeball"
+          onclick="aumentar()" />
+        <button id="btnSave" onclick="save()">Salvar</button>
+        <button id="btnReset" onclick="reset()">Reset</button>
+      </div>
+      <div id="menu">
+        <div id="fullPokeGame">
+          <div id="pokeContainer">
+            <img src=" " id="pokemonRandom" />
+          </div>
+          <div id="pokeInfo">
+            <h1 id="nomepoke"></h1>
+            <h1 id="idpoke"></h1>
+          </div>
+          <div id="menuADV">
+            <input
+              type="text"
+              placeholder="qual o pokemon?"
+              id="adv"
+              autocomplete="off" />
+            <button onclick="guess()">Advinhar</button>
+          </div>
+          <div id="centerPokeOp">
+            <div id="pokeOptions">
+              <button id="btnCap" onclick="capturar()">Capturar</button>
+              <button id="btnRun" onclick="fugir()">Fugir</button>
+            </div>
+          </div>
+        </div>
+        <div id="menuDivisao">
+          <div class="divisoes">
+            <img src="img/pokeball.png" onclick="menuBall()" />
+          </div>
+          <div class="divisoes">
+            <img src="img/bolsa.png" onclick="bolsa()" />
+          </div>
+          <div class="divisoes">
+            <img src="img/pokedex.png" onclick="pokedex()" />
+          </div>
+        </div>
+        <!-- menu pokebolas -->
+        <div id="menuPokeballs">
+          <hr style="margin: 25px 0px 25px 0px" />
+
+          <h3 style="color: white; cursor: pointer" onclick="balloff()">
+            Suas Pokebolas ▼
+          </h3>
+          <div id="galeria-pokeballs">
+            <div class="myBalls">
+              <img
+                src="img/pokebolas/pokeball.webp"
+                id="pokebola"
+                onclick="pokebola()" />
+              <p>34x</p>
+            </div>
+            <div class="myBalls">
+              <img
+                src="img/pokebolas/greatball.png"
+                id="greatbola"
+                onclick="great()" />
+              <p>34x</p>
+            </div>
+            <div class="myBalls">
+              <img
+                src="img/pokebolas/ultraball.webp"
+                id="ultrabola"
+                onclick="ultra()" />
+              <p>34x</p>
+            </div>
+            <div class="myBalls">
+              <img
+                src="img/pokebolas/beastball.png"
+                id="monstrobola"
+                onclick="monster()" />
+              <p>34x</p>
+            </div>
+            <div class="myBalls">
+              <img
+                src="img/pokebolas/masterball.webp"
+                id="masterbola"
+                onclick="master()" />
+              <p>34x</p>
+            </div>
+          </div>
+        </div>
+        <!-- menu bolsa -->
+        <div id="containerBolsa">
+          <div id="bolsa"></div>
+        </div>
+      </div>
+
+      <div id="container-team">
+        <div class="pokeCaught" id="pokemon1">
+          <img src="" class="imagemdosPoke" id="poke1IMG" />
+        </div>
+        <div class="pokeCaught" id="pokemon2">
+          <img src="" class="imagemdosPoke" id="poke2IMG" />
+        </div>
+        <div class="pokeCaught" id="pokemon3">
+          <img src="" class="imagemdosPoke" id="poke3IMG" />
+        </div>
+        <div class="pokeCaught" id="pokemon4">
+          <img src="" class="imagemdosPoke" id="poke4IMG" />
+        </div>
+        <div class="pokeCaught" id="pokemon5">
+          <img src="" class="imagemdosPoke" id="poke5IMG" />
+        </div>
+        <div class="pokeCaught" id="pokemon6">
+          <img src="" class="imagemdosPoke" id="poke6IMG" />
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/pokemons.js"></script>
+  </body>
+</html>
