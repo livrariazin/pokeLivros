@@ -2030,9 +2030,7 @@ function guess() {
   let resposta = document.getElementById("adv").value;
   if (resposta != "") {
     if (resposta.toLowerCase() == nome.toLowerCase()) {
-      document
-        .getElementById("pokemonRandom")
-        .setAttribute("id", "pokemonDescoberto");
+      document.getElementById("pokemonRandom").style.filter = "brightness(1)";
       document.getElementById("nomepoke").innerHTML = nome;
       document.getElementById("idpoke").innerHTML = id;
     } else {
@@ -2060,8 +2058,10 @@ function fugir() {
 
   if (pokeflag === 1) {
     pokeflag = 2;
+    document.getElementById("pokemonRandom").style.filter = "brightness(0)";
     document.getElementById("pokemonRandom").src = imagem;
     document.getElementById("nomepoke").innerHTML = "????" + " - " + "????";
+    document.getElementById("idpoke").innerHTML = "";
     document.getElementById("adv").value;
   }
 }
@@ -2075,5 +2075,20 @@ function capturar() {
   } else {
     document.getElementById("poke1IMG").src = imagem;
     document.getElementById("poke1IMG").style.display = "block";
+
+    pokeflag = 1;
+    randomNUM = Math.floor(Math.random() * pokemons.length);
+    id = randomNUM + 1;
+    nome = pokeNome[randomNUM];
+    imagem = pokemons[randomNUM];
+
+    if (pokeflag === 1) {
+      pokeflag = 2;
+      document.getElementById("pokemonRandom").style.filter = "brightness(0)";
+      document.getElementById("pokemonRandom").src = imagem;
+      document.getElementById("nomepoke").innerHTML = "????" + " - " + "????";
+      document.getElementById("idpoke").innerHTML = "";
+      document.getElementById("adv").value;
+    }
   }
 }

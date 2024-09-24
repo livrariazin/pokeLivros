@@ -18,11 +18,6 @@
   width: 80%;
 }
 
-#pokemonDescoberto {
-  filter: brightness(1);
-  width: 80%;
-}
-
 #pokeInfo {
   display: flex;
   flex-direction: row;
