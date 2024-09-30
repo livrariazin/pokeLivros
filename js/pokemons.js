@@ -1001,6 +1001,8 @@ let pokemons = [
   "img/pokemon/1000.png",
 ];
 
+let pokeLength = pokemons.length;
+
 let pokeNome = [
   //gen1
   "Bulbasaur",
@@ -2010,8 +2012,10 @@ let pokeNome = [
   "Gholdengo",
 ];
 
+let pokeNomeLength = pokeNome.length;
+
 let pokeflag = 1;
-var randomNUM = Math.floor(Math.random() * pokemons.length);
+var randomNUM = Math.floor(Math.random() * pokeLength);
 let id = randomNUM + 1;
 let nome = pokeNome[randomNUM];
 let imagem = pokemons[randomNUM];
@@ -2025,6 +2029,13 @@ addEventListener("load", (event) => {
   }
 });
 
+// adivinhar usando o enter inves do botao
+document.querySelector("#adv").addEventListener("keyup", (e) => {
+  if (e.keyCode === 13) {
+    guess();
+  }
+});
+
 // comando pra advinhar
 function guess() {
   let resposta = document.getElementById("adv").value;
@@ -2033,20 +2044,15 @@ function guess() {
       document.getElementById("pokemonRandom").style.filter = "brightness(1)";
       document.getElementById("nomepoke").innerHTML = nome;
       document.getElementById("idpoke").innerHTML = id;
+      document.getElementById("adv").value = null;
     } else {
       window.alert("errou");
+      document.getElementById("adv").value = null;
     }
   } else {
     window.alert("Não existe pokemon com nome vazio, tente algo.");
   }
 }
-
-// adivinhar usando o enter inves do botao
-document.querySelector("#adv").addEventListener("keyup", (e) => {
-  if (e.keyCode === 13) {
-    guess();
-  }
-});
 
 // medroso fugindo slk brutal
 function fugir() {
@@ -2067,14 +2073,40 @@ function fugir() {
 }
 
 function capturar() {
+  var poke1IMG = document.getElementById("poke1IMG");
+  var poke2IMG = document.getElementById("poke2IMG");
+  var poke3IMG = document.getElementById("poke3IMG");
+  var poke4IMG = document.getElementById("poke4IMG");
+  var poke5IMG = document.getElementById("poke5IMG");
+  var poke6IMG = document.getElementById("poke6IMG");
+
   if (
     document.getElementById("nomepoke").innerHTML ==
     "????" + " - " + "????"
   ) {
     window.alert("voce nem descobriu o pokemon ainda");
   } else {
-    document.getElementById("poke1IMG").src = imagem;
-    document.getElementById("poke1IMG").style.display = "block";
+    if (poke1IMG.style.display != "block") {
+      poke1IMG.src = imagem;
+      poke1IMG.style.display = "block";
+    } else if (poke2IMG.style.display != "block") {
+      poke2IMG.src = imagem;
+      poke2IMG.style.display = "block";
+    } else if (poke3IMG.style.display != "block") {
+      poke3IMG.src = imagem;
+      poke3IMG.style.display = "block";
+    } else if (poke4IMG.style.display != "block") {
+      poke4IMG.src = imagem;
+      poke4IMG.style.display = "block";
+    } else if (poke5IMG.style.display != "block") {
+      poke5IMG.src = imagem;
+      poke5IMG.style.display = "block";
+    } else if (poke6IMG.style.display != "block") {
+      poke6IMG.src = imagem;
+      poke6IMG.style.display = "block";
+    } else {
+      window.alert("o seu time esta cheio, pokemon adicionado a sua mochila.");
+    }
 
     pokeflag = 1;
     randomNUM = Math.floor(Math.random() * pokemons.length);
